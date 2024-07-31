@@ -36,24 +36,8 @@ const Weather = () => {
         return `${day} ${date} ${month} ${year}`;
     };
 
-    const getWeatherClass = () => {
-        if (typeof weather.weather != "undefined") {
-            switch (weather.weather[0].main.toLowerCase()) {
-                case 'clear': return 'clear';
-                case 'clouds': return 'clouds';
-                case 'rain': return 'rain';
-                case 'snow': return 'snow';
-                case 'thunderstorm': return 'thunderstorm';
-                case 'drizzle': return 'drizzle';
-                case 'haze': return 'haze';
-                default: return '';
-            }
-        }
-        return '';
-    };
-
     return (
-        <div className={`app ${getWeatherClass()}`}>
+        <div>
             <main>
                 <div className='search-box'>
                     <input
